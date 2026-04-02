@@ -1,5 +1,5 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/microsphere-projects/microsphere-bom)
-[![Maven Build](https://github.com/microsphere-projects/microsphere-bom/actions/workflows/maven-bom.yml/badge.svg)](https://github.com/microsphere-projects/microsphere-bom/actions/workflows/maven-bom.yml)
+[![Maven Build](https://github.com/microsphere-projects/microsphere-bom/actions/workflows/maven-build.yml/badge.svg)](https://github.com/microsphere-projects/microsphere-bom/actions/workflows/maven-build.yml)
 ![Maven](https://img.shields.io/maven-central/v/io.github.microsphere-projects/microsphere-bom.svg)
 ![License](https://img.shields.io/github/license/microsphere-projects/microsphere-bom.svg)
 
