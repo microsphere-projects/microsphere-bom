@@ -58,6 +58,7 @@
     <modules>
         <module>microsphere-logging-bom</module>
         <module>microsphere-testing-bom</module>
+        <module>microsphere-all-bom</module>
         <module>microsphere-bom-example</module>
     </modules>
 
