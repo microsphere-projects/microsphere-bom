@@ -116,6 +116,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- JSONassert -->
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Hamcrest -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
         <!-- JMH -->
         <dependency>
             <groupId>org.openjdk.jmh</groupId>

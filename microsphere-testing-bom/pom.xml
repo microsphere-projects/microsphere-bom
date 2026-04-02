@@ -22,6 +22,8 @@
         <junit.version>4.13.2</junit.version>
         <junit-jupiter.version>6.0.3</junit-jupiter.version>
         <mockito.version>5.23.0</mockito.version>
+        <jsonassert.version>1.5.3</jsonassert.version>
+        <hamcrest.version>3.0</hamcrest.version>
         <jmh.version>1.37</jmh.version>
     </properties>
 
@@ -47,8 +49,24 @@
             <!-- Mockito -->
             <dependency>
                 <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
+                <artifactId>mockito-bom</artifactId>
                 <version>${mockito.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- JSONassert -->
+            <dependency>
+                <groupId>org.skyscreamer</groupId>
+                <artifactId>jsonassert</artifactId>
+                <version>${jsonassert.version}</version>
+            </dependency>
+
+            <!-- Hamcrest -->
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest</artifactId>
+                <version>${hamcrest.version}</version>
             </dependency>
 
             <!-- JMH -->
