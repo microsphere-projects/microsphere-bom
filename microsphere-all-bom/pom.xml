@@ -40,6 +40,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Java EE BOM -->
+            <dependency>
+                <groupId>io.github.microsphere-projects</groupId>
+                <artifactId>microsphere-javaee-bom</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
