@@ -60,6 +60,7 @@
         <module>microsphere-testing-bom</module>
         <module>microsphere-javadb-bom</module>
         <module>microsphere-javaee-bom</module>
+        <module>microsphere-tomcat-bom</module>
         <module>microsphere-all-bom</module>
         <module>microsphere-bom-example</module>
     </modules>
