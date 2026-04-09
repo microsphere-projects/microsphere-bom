@@ -88,7 +88,7 @@ jobs:
           if gh release view "v${{ inputs.revision }}" >/dev/null 2>&1; then
             echo "Release v${{ inputs.revision }} already exists, skipping."
           else
-            gh release create v${{ inputs.revision }} \
+            gh release create ${{ inputs.revision }} \
               --title "v${{ inputs.revision }}" \
               --generate-notes \
               --latest
