@@ -66,13 +66,14 @@ jobs:
           prompt = (
               f"Generate concise release notes for version {current_tag}.\n\n"
               f"Commits since {prev_tag}:\n{commits}\n\n"
-              "Format the output as markdown with sections for New Features, Bug Fixes, "
+              "Format the output as markdown with sections if present for New Features, Bug Fixes, "
+              "Documentations, Dependency Updates, Test Improvements, Build and Workflow Enhancements "
               "and Other Changes (only include sections that have relevant commits). "
               "Be concise and clear."
           )
 
           payload = json.dumps({
-              "model": "gpt-4o",
+              "model": "claude-sonnet-4-6",
               "messages": [{"role": "user", "content": prompt}]
           }).encode()
 
