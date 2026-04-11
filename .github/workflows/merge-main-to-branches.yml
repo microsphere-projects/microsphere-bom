@@ -1,7 +1,7 @@
 # This workflow automatically merges the 'main' branch into 'dev' and 'release' branches
 # whenever changes are pushed to 'main', without requiring manual confirmation.
 
-name: Merge Main to Dev and Release
+name: Merge Main to branches
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         branch: [ 'dev', 'release' ]
-    name: Merge main to branch
+    name: Merge main -> ${{ matrix.branch }}
     permissions:
       contents: write
     steps:
