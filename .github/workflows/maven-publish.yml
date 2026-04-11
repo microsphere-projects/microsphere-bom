@@ -155,7 +155,7 @@ jobs:
             printf "# Release Notes\n\n" > "$NOTES_FILE"
           fi
           printf "## v%s\n\n%s\n\n" "$CURRENT_TAG" "$SUMMARY" >> "$NOTES_FILE"
-          printf "**Full Changelog**: %s/%s/compare/%s...%s\n" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$PREV_TAG" "$CURRENT_TAG"
+          printf "**Full Changelog**: %s/%s/compare/%s...%s\n" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$PREV_TAG" "$CURRENT_TAG" >> "$NOTES_FILE"
           
           # Write the current release notes to a temp file for the Create Release step
           printf "%s" "$SUMMARY" > /tmp/current-release-notes.md
