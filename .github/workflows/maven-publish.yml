@@ -119,8 +119,9 @@ jobs:
           prompt = (
               f"Generate concise release notes for version {current_tag}.\n\n"
               f"Commits since {prev_tag}:\n{commits}\n\n"
-              "Format the output as markdown with sections for New Features, Bug Fixes, "
-              "and Other Changes (only include sections that have relevant commits). "
+              "Format the output as markdown with sections if present for New Features, Bug Fixes, "
+              "Documentations, Dependency Updates, Test Improvements, Build and Workflow Enhancements "
+              "and Other Changes.\n\n"
               "Be concise and clear."
           )
 
@@ -154,7 +155,8 @@ jobs:
             printf "# Release Notes\n\n" > "$NOTES_FILE"
           fi
           printf "## v%s\n\n%s\n\n" "$CURRENT_TAG" "$SUMMARY" >> "$NOTES_FILE"
-
+          printf "**Full Changelog**: %s/%s/compare/%s...%s\n" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$PREV_TAG" "$CURRENT_TAG"
+          
           # Write the current release notes to a temp file for the Create Release step
           printf "%s" "$SUMMARY" > /tmp/current-release-notes.md
 
