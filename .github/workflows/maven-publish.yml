@@ -164,8 +164,8 @@ jobs:
 
       - name: Create Release
         run: |
-          if gh release view "v${{ inputs.revision }}" >/dev/null 2>&1; then
-            echo "Release v${{ inputs.revision }} already exists, skipping."
+          if gh release view "${{ inputs.revision }}" >/dev/null 2>&1; then
+            echo "Release ${{ inputs.revision }} already exists, skipping."
           else
             gh release create ${{ inputs.revision }} \
               --title "v${{ inputs.revision }}" \
