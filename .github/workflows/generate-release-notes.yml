@@ -68,7 +68,7 @@ jobs:
               f"Commits since {prev_tag}:\n{commits}\n\n"
               "Format the output as markdown with sections if present for New Features, Bug Fixes, "
               "Documentations, Dependency Updates, Test Improvements, Build and Workflow Enhancements "
-              "and Other Changes (only include sections that have relevant commits). "
+              "and Other Changes.\n\n"
               "Be concise and clear."
           )
 
