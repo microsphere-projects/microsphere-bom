@@ -34,3 +34,20 @@ Thank you for using **microsphere-projects**! 🎉
 
 For a detailed changelog, refer [here](https://github.com/your-repo/compare/v0.1.6...v0.1.7).
 
+## v0.1.8
+
+# Release Notes: Version 0.1.8
+
+## Build and Workflow Enhancements
+- Improved release checks by using raw revision for validation. ([2ad3ec2](https://github.com/microsphere-projects/microsphere-bom/commit/2ad3ec2))
+- Automated version bump to `0.1.8` after publishing `0.1.7`. ([870433e](https://github.com/microsphere-projects/microsphere-bom/commit/870433e))
+- Integrated merging processes between `main` and `release` branches. ([147589a](https://github.com/microsphere-projects/microsphere-bom/commit/147589a), [7563dbe](https://github.com/microsphere-projects/microsphere-bom/commit/7563dbe), [6ef0cd9](https://github.com/microsphere-projects/microsphere-bom/commit/6ef0cd9), [4149000](https://github.com/microsphere-projects/microsphere-bom/commit/4149000))
+
+## Documentations
+- Updated release notes with appended changelog details. ([f3f15aa](https://github.com/microsphere-projects/microsphere-bom/commit/f3f15aa))
+
+---
+
+No new features, bug fixes, test improvements, or dependency updates in this version.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.7...0.1.8
