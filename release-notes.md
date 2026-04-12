@@ -51,3 +51,23 @@ For a detailed changelog, refer [here](https://github.com/your-repo/compare/v0.1
 No new features, bug fixes, test improvements, or dependency updates in this version.
 
 **Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.7...0.1.8
+## v0.1.9
+
+# Release Notes for v0.1.9
+
+## Other Changes
+- **Release Notes Improvements**:
+  - Simplified release notes prompt wording. ([65ba236](https://github.com/microsphere-projects/microsphere-bom/commit/65ba236))
+  - Refactored release notes formatting for clarity. ([feb0066](https://github.com/microsphere-projects/microsphere-bom/commit/feb0066))
+  - Fixed formatting for release notes prompt and summary. ([fab24d1](https://github.com/microsphere-projects/microsphere-bom/commit/fab24d1))
+  - Included changelog URL in the release notes summary. ([9acaa54](https://github.com/microsphere-projects/microsphere-bom/commit/9acaa54))
+
+## Build and Workflow Enhancements
+- Updated to use `FULL_CHANGELOG` variable in release notes generation. ([e301998](https://github.com/microsphere-projects/microsphere-bom/commit/e301998))
+- Bumped version to `0.1.9` after publishing `0.1.8`. ([12e4280](https://github.com/microsphere-projects/microsphere-bom/commit/12e4280))
+
+---
+
+**View Full Changelog**: [Changelog](https://github.com/microsphere-projects/microsphere-bom/releases/tag/v0.1.9)
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.8...0.1.9
