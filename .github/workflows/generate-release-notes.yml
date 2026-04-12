@@ -96,5 +96,5 @@ jobs:
           PYEOF
           )
           
-          SUMMARY = "$SUMMARY \n\n **Full Changelog**: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/$PREV_TAG...$CURRENT_TAG\n"
-          printf "## v%s\n\n%s\n\n" "$CURRENT_TAG" "$SUMMARY"
+          FULL_CHANGELOG="**Full Changelog**: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/$PREV_TAG...$CURRENT_TAG"
+          printf "## v%s\n\n%s\n\n %s" "$CURRENT_TAG" "$SUMMARY" "$FULL_CHANGELOG"
