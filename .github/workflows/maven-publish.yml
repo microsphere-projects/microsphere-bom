@@ -154,11 +154,15 @@ jobs:
           if [ ! -f "$NOTES_FILE" ]; then
             printf "# Release Notes\n\n" > "$NOTES_FILE"
           fi
+          
+          FULL_CHANGELOG="**Full Changelog**: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/$PREV_TAG...$CURRENT_TAG"
+          
           printf "## v%s\n\n%s\n\n" "$CURRENT_TAG" "$SUMMARY" >> "$NOTES_FILE"
-          printf "**Full Changelog**: %s/%s/compare/%s...%s\n" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$PREV_TAG" "$CURRENT_TAG" >> "$NOTES_FILE"
+          printf "%s" "$FULL_CHANGELOG" >> "$NOTES_FILE"
           
           # Write the current release notes to a temp file for the Create Release step
           printf "%s" "$SUMMARY" > /tmp/current-release-notes.md
+          printf "%s" "$FULL_CHANGELOG" >> /tmp/current-release-notes.md
 
           echo "Release notes generated and appended to $NOTES_FILE"
 
