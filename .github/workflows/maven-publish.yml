@@ -121,7 +121,7 @@ jobs:
               f"Commits since {prev_tag}:\n{commits}\n\n"
               "Format the output as markdown with sections if present for New Features, Bug Fixes, "
               "Documentations, Dependency Updates, Test Improvements, Build and Workflow Enhancements "
-              "and Other Changes.\n\n"
+              "and Other Changes(excludes Full Changelog).\n\n"
               "Be concise and clear."
           )
 
@@ -161,7 +161,7 @@ jobs:
           printf "%s" "$FULL_CHANGELOG" >> "$NOTES_FILE"
           
           # Write the current release notes to a temp file for the Create Release step
-          printf "%s" "$SUMMARY" > /tmp/current-release-notes.md
+          printf "%s\n\n" "$SUMMARY" > /tmp/current-release-notes.md
           printf "%s" "$FULL_CHANGELOG" >> /tmp/current-release-notes.md
 
           echo "Release notes generated and appended to $NOTES_FILE"
@@ -172,7 +172,7 @@ jobs:
             echo "Release ${{ inputs.revision }} already exists, skipping."
           else
             gh release create ${{ inputs.revision }} \
-              --title "v${{ inputs.revision }}" \
+              --title "${{ inputs.revision }}" \
               --notes-file /tmp/current-release-notes.md \
               --latest
           fi
