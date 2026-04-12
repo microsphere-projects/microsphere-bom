@@ -68,7 +68,7 @@ jobs:
               f"Commits since {prev_tag}:\n{commits}\n\n"
               "Format the output as markdown with sections if present for New Features, Bug Fixes, "
               "Documentations, Dependency Updates, Test Improvements, Build and Workflow Enhancements "
-              "and Other Changes.\n\n"
+              "and Other Changes(includes the commit IDs without links).\n\n"
               "Be concise and clear."
           )
 
@@ -96,5 +96,5 @@ jobs:
           PYEOF
           )
           
-          SUMMARY = "$SUMMARY \n\n "**Full Changelog**: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/$PREV_TAG...$CURRENT_TAG\n""
+          SUMMARY = "$SUMMARY \n\n **Full Changelog**: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/compare/$PREV_TAG...$CURRENT_TAG\n"
           printf "## v%s\n\n%s\n\n" "$CURRENT_TAG" "$SUMMARY"
