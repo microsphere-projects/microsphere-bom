@@ -70,4 +70,16 @@ No new features, bug fixes, test improvements, or dependency updates in this ver
 
 **View Full Changelog**: [Changelog](https://github.com/microsphere-projects/microsphere-bom/releases/tag/v0.1.9)
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.8...0.1.9
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.8...0.1.9## v0.2.0
+
+# Release Notes - Version 0.2.0
+
+## Build and Workflow Enhancements
+- Improved formatting for release notes.  
+- Switched to using raw revision for release updates.  
+- Streamlined version bump process post-publishing.  
+
+## Other Changes
+- Merged `main` into `release` and vice versa to maintain branch parity.  
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.9...0.2.0
