@@ -445,17 +445,6 @@
     </build>
 
     <profiles>
-
-        <profile>
-            <id>java11+</id>
-            <activation>
-                <jdk>[11,)</jdk>
-            </activation>
-            <properties>
-                <tomcat.version>10.1.54</tomcat.version>
-            </properties>
-        </profile>
-
         <profile>
             <id>java17+</id>
             <activation>
