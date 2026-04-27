@@ -82,4 +82,23 @@ No new features, bug fixes, test improvements, or dependency updates in this ver
 ## Other Changes
 - Merged `main` into `release` and vice versa to maintain branch parity.  
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.9...0.2.0
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.1.9...0.2.0## v0.2.1
+
+# Release Notes - Version 0.2.1
+
+## New Features
+- Added Java 11+ Maven profile for Tomcat 10.1.54. ([d4fcc7b](#), [92d353a](#))
+- Introduced Tomcat 9/10 profiles; set Tomcat 11 for Java 17. ([8c3f676](#))
+
+## Dependency Updates
+- Bumped `org.xerial:sqlite-jdbc` from `3.51.3.0` to `3.53.0.0`. ([8646092](#))
+
+## Build and Workflow Enhancements
+- Updated Maven wrapper to version `3.9.14`. ([ee8d01e](#))
+
+## Other Changes
+- Removed the Java 11+ Maven profile. ([46255e4](#)) 
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.0...0.2.1
