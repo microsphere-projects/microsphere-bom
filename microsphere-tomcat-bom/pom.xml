@@ -19,7 +19,7 @@
     <description>Microsphere BOM of Apache Tomcat</description>
 
     <properties>
-        <tomcat.version>11.0.21</tomcat.version>
+        <tomcat.version>11.0.22</tomcat.version>
     </properties>
 
     <dependencyManagement>
