@@ -118,4 +118,20 @@ No new features, bug fixes, test improvements, or dependency updates in this ver
 
 For more details, please refer to the [full changelog](https://github.com/microsphere-projects/compare/0.2.1...0.2.2).
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.1...0.2.2
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.1...0.2.2## v0.2.3
+
+# Release Notes: Version 0.2.3
+
+## Dependency Updates
+- **JUnit BOM**: Upgraded from `6.0.3` to `6.1.0`. ([#11](https://github.com/microsphere-projects/pull/11))
+- **SLF4J API**: Upgraded from `2.0.17` to `2.0.18`. ([#10](https://github.com/microsphere-projects/pull/10))
+
+## Build and Workflow Enhancements
+- Configured Maven publishing with server credentials. ([aa9c1b4](https://github.com/microsphere-projects/commit/aa9c1b4))
+- Improved Maven workflows and branch synchronization logic. ([b334c25](https://github.com/microsphere-projects/commit/b334c25))
+
+---
+
+No new features, bug fixes, or documentation updates were introduced in this release.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.2...0.2.3
