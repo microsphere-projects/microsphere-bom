@@ -193,7 +193,10 @@ jobs:
           BOM_VERSION: ${{ steps.version.outputs.value }}
         run: |
           WIKI_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.wiki.git"
-          git clone "${WIKI_REPO}" wiki-repo
+          if ! git clone "${WIKI_REPO}" wiki-repo 2>/dev/null; then
+            echo "::warning::Wiki repository could not be cloned. Ensure the wiki is enabled for this repository. Skipping wiki update."
+            exit 0
+          fi
 
           cp wiki-BOM-Dependencies.md wiki-repo/BOM-Dependencies.md
 
