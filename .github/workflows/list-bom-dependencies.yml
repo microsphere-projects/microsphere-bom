@@ -1,0 +1,150 @@
+# This workflow parses each BOM module's pom.xml and publishes a dependency table
+# to the GitHub Actions job summary, grouped by module.
+# Excluded modules: microsphere-all-bom, microsphere-bom-example
+
+name: List BOM Dependencies
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [ 'main', 'dev' ]
+  pull_request:
+    branches: [ 'main', 'dev', 'release' ]
+  workflow_dispatch:
+
+jobs:
+  list-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v5
+
+      - name: Generate dependency tables
+        run: |
+          python3 - <<'EOF'
+          import os
+          import xml.etree.ElementTree as ET
+
+          NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
+
+          # BOM modules to process (microsphere-all-bom and microsphere-bom-example are excluded)
+          BOM_MODULES = [
+              'microsphere-logging-bom',
+              'microsphere-testing-bom',
+              'microsphere-javadb-bom',
+              'microsphere-javaee-bom',
+              'microsphere-tomcat-bom',
+          ]
+
+          def text(el, tag):
+              found = el.find(tag, NS)
+              return found.text.strip() if found is not None and found.text else ''
+
+          def strip_ns(tag):
+              return tag.replace('{http://maven.apache.org/POM/4.0.0}', '')
+
+          def parse_properties(el):
+              props = {}
+              properties_el = el.find('m:properties', NS)
+              if properties_el is not None:
+                  for prop in properties_el:
+                      props[strip_ns(prop.tag)] = (prop.text or '').strip()
+              return props
+
+          def parse_deps(container_el):
+              """Return list of (groupId, artifactId, raw_version) from <dependencyManagement>."""
+              deps = []
+              dm = container_el.find('m:dependencyManagement/m:dependencies', NS)
+              if dm is not None:
+                  for dep in dm.findall('m:dependency', NS):
+                      gid = text(dep, 'm:groupId')
+                      aid = text(dep, 'm:artifactId')
+                      ver = text(dep, 'm:version')
+                      deps.append((gid, aid, ver))
+              return deps
+
+          def resolve(ver_raw, props):
+              """Resolve a version string that may be a ${property} reference."""
+              if ver_raw.startswith('${') and ver_raw.endswith('}'):
+                  prop_name = ver_raw[2:-1]
+                  return props.get(prop_name, ver_raw), prop_name
+              return ver_raw, None
+
+          def parse_pom(pom_path):
+              tree = ET.parse(pom_path)
+              root = tree.getroot()
+
+              default_props = parse_properties(root)
+              main_deps = parse_deps(root)
+
+              # Collect profiles: id -> {props, extra_deps}
+              profiles = {}
+              for profile in root.findall('m:profiles/m:profile', NS):
+                  pid = text(profile, 'm:id')
+                  p_props = parse_properties(profile)
+                  p_deps  = parse_deps(profile)
+                  profiles[pid] = {'props': p_props, 'deps': p_deps}
+
+              return default_props, main_deps, profiles
+
+          def escape(s):
+              return s.replace('|', '\\|')
+
+          summary_path = os.environ.get('GITHUB_STEP_SUMMARY', '/dev/stdout')
+          with open(summary_path, 'a') as out:
+              out.write('# BOM Dependencies\n')
+
+              for module in BOM_MODULES:
+                  pom_path = os.path.join(module, 'pom.xml')
+                  if not os.path.exists(pom_path):
+                      continue
+
+                  default_props, main_deps, profiles = parse_pom(pom_path)
+
+                  # Build a unified dependency list:
+                  # key = (groupId, artifactId) -> (default_version_str, prop_name)
+                  dep_map = {}
+                  for gid, aid, ver_raw in main_deps:
+                      ver, prop_name = resolve(ver_raw, default_props)
+                      dep_map[(gid, aid)] = (ver, prop_name)
+
+                  # Merge profile-only deps (those absent from main dependencyManagement)
+                  for pid, pdata in profiles.items():
+                      for gid, aid, ver_raw in pdata['deps']:
+                          key = (gid, aid)
+                          if key not in dep_map:
+                              # Resolve using profile props first, then default props
+                              merged = {**default_props, **pdata['props']}
+                              ver, prop_name = resolve(ver_raw, merged)
+                              dep_map[key] = (ver, prop_name)
+
+                  # Preserve insertion order (main deps first, then profile-only deps)
+                  ordered_keys = list(dict.fromkeys(
+                      [(g, a) for g, a, _ in main_deps] +
+                      [(g, a) for pid, pd in profiles.items() for g, a, _ in pd['deps']]
+                  ))
+
+                  out.write(f'\n## {module}\n\n')
+                  out.write('| groupId | artifactId | version | version (profile-specified) |\n')
+                  out.write('| --- | --- | --- | --- |\n')
+
+                  for gid, aid in ordered_keys:
+                      default_ver, prop_name = dep_map.get((gid, aid), ('', None))
+
+                      # Collect per-profile version overrides
+                      profile_versions = []
+                      for pid, pdata in profiles.items():
+                          if prop_name and prop_name in pdata['props']:
+                              profile_versions.append(
+                                  f'`{pid}`: {pdata["props"][prop_name]}'
+                              )
+
+                      profile_str = ' / '.join(profile_versions)
+                      out.write(
+                          f'| {escape(gid)} | {escape(aid)} | {escape(default_ver)} '
+                          f'| {escape(profile_str)} |\n'
+                      )
+
+          EOF
