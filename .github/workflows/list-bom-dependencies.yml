@@ -1,18 +1,26 @@
-# This workflow parses each BOM module's pom.xml and publishes a dependency table
-# to the GitHub Actions job summary, grouped by module.
+# This workflow parses each BOM module's pom.xml and:
+#   1. Publishes a dependency table to the GitHub Actions job summary (all triggers).
+#   2. Writes/updates the BOM-Dependencies wiki page (on release or workflow_dispatch).
 # Excluded modules: microsphere-all-bom, microsphere-bom-example
 
 name: List BOM Dependencies
 
 permissions:
-  contents: read
+  contents: write
 
 on:
   push:
     branches: [ 'main', 'dev' ]
   pull_request:
     branches: [ 'main', 'dev', 'release' ]
+  release:
+    types: [ published ]
   workflow_dispatch:
+    inputs:
+      revision:
+        description: 'Release version to document (e.g. 0.2.4). Leave empty to use version from pom.xml.'
+        required: false
+        default: ''
 
 jobs:
   list-dependencies:
@@ -21,10 +29,25 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v5
 
+      - name: Detect release version
+        id: version
+        run: |
+          if [ -n "${{ inputs.revision }}" ]; then
+            VERSION="${{ inputs.revision }}"
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+          else
+            VERSION=$(grep -oP '(?<=<revision>)[^<]+' pom.xml | head -1)
+          fi
+          echo "value=${VERSION}" >> "$GITHUB_OUTPUT"
+
       - name: Generate dependency tables
+        env:
+          BOM_VERSION: ${{ steps.version.outputs.value }}
         run: |
           python3 - <<'EOF'
           import os
+          import sys
           import xml.etree.ElementTree as ET
 
           NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
@@ -92,9 +115,8 @@ jobs:
           def escape(s):
               return s.replace('|', '\\|')
 
-          summary_path = os.environ.get('GITHUB_STEP_SUMMARY', 'bom-dependencies-summary.md')
-          with open(summary_path, 'a') as out:
-              out.write('# BOM Dependencies\n')
+          def render_tables(out, version):
+              out.write(f'# BOM Dependencies — v{version}\n')
 
               for module in BOM_MODULES:
                   pom_path = os.path.join(module, 'pom.xml')
@@ -104,7 +126,7 @@ jobs:
                   try:
                       default_props, main_deps, profiles = parse_pom(pom_path)
                   except ET.ParseError as e:
-                      print(f'ERROR: Failed to parse {pom_path}: {e}', file=__import__('sys').stderr)
+                      print(f'ERROR: Failed to parse {pom_path}: {e}', file=sys.stderr)
                       continue
 
                   # Build a unified dependency list:
@@ -151,4 +173,37 @@ jobs:
                           f'| {escape(profile_str)} |\n'
                       )
 
+          version = os.environ.get('BOM_VERSION', 'unknown')
+
+          # Write to the GitHub Actions job summary
+          summary_path = os.environ.get('GITHUB_STEP_SUMMARY', 'bom-dependencies-summary.md')
+          with open(summary_path, 'a') as out:
+              render_tables(out, version)
+
+          # Write a standalone wiki page for use in the next step
+          with open('wiki-BOM-Dependencies.md', 'w') as out:
+              render_tables(out, version)
+
           EOF
+
+      - name: Publish dependency table to wiki
+        if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BOM_VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          WIKI_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.wiki.git"
+          git clone "${WIKI_REPO}" wiki-repo
+
+          cp wiki-BOM-Dependencies.md wiki-repo/BOM-Dependencies.md
+
+          cd wiki-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add BOM-Dependencies.md
+          if git diff --cached --quiet; then
+            echo "No changes to wiki page, skipping commit."
+          else
+            git commit -m "docs: update BOM dependency table for v${BOM_VERSION}"
+            git push
+          fi
