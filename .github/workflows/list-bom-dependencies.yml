@@ -92,7 +92,7 @@ jobs:
           def escape(s):
               return s.replace('|', '\\|')
 
-          summary_path = os.environ.get('GITHUB_STEP_SUMMARY', '/dev/stdout')
+          summary_path = os.environ.get('GITHUB_STEP_SUMMARY', 'bom-dependencies-summary.md')
           with open(summary_path, 'a') as out:
               out.write('# BOM Dependencies\n')
 
@@ -101,7 +101,11 @@ jobs:
                   if not os.path.exists(pom_path):
                       continue
 
-                  default_props, main_deps, profiles = parse_pom(pom_path)
+                  try:
+                      default_props, main_deps, profiles = parse_pom(pom_path)
+                  except ET.ParseError as e:
+                      print(f'ERROR: Failed to parse {pom_path}: {e}', file=__import__('sys').stderr)
+                      continue
 
                   # Build a unified dependency list:
                   # key = (groupId, artifactId) -> (default_version_str, prop_name)
