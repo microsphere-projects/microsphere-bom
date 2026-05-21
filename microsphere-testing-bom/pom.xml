@@ -93,7 +93,7 @@
                 <jdk>[1.8,17)</jdk>
             </activation>
             <properties>
-                <junit-jupiter.version>5.14.3</junit-jupiter.version>
+                <junit-jupiter.version>5.14.4</junit-jupiter.version>
                 <mockito.version>4.11.0</mockito.version>
             </properties>
         </profile>
