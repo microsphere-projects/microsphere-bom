@@ -134,4 +134,27 @@ For more details, please refer to the [full changelog](https://github.com/micros
 
 No new features, bug fixes, or documentation updates were introduced in this release.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.2...0.2.3
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.2...0.2.3## v0.2.4
+
+# Release Notes - Version 0.2.4
+
+## New Features
+- **BOM Dependency Management**:  
+  - Generate dependency tables for the BOM and write them to the wiki with the release version. ([#12](https://github.com/microsphere-projects/copilot/pull/12))  
+  - Introduced `list-bom-dependencies` workflow action for improved automation.
+
+## Bug Fixes
+- Gracefully handle missing wiki repository scenarios.  
+- Enhanced robustness for POM parsing errors with improved local fallback handling.
+
+## Dependency Updates
+- **JUnit Jupiter**: Updated to version `5.14.4`.
+
+## Build and Workflow Enhancements
+- Merged main into release branch and vice versa to maintain clean syncing.  
+
+---
+
+Thank you for using our project! 🚀
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.3...0.2.4
