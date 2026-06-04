@@ -157,4 +157,25 @@ No new features, bug fixes, or documentation updates were introduced in this rel
 
 Thank you for using our project! 🚀
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.3...0.2.4
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.3...0.2.4## v0.2.5
+
+# Release Notes - Version 0.2.5
+
+## New Features
+- Added `CLAUDE.md` with repository build and usage guide. (#52869fe)
+- Added `USER_GUIDE.md` for Microsphere BOM. (#23225da)
+
+## Documentation
+- Enhanced repository documentation with new guides: `CLAUDE.md` and `USER_GUIDE.md`.
+
+## Dependency Updates
+- Bumped `logback.version` from 1.5.32 to 1.5.33. (#244258f)
+
+## Build and Workflow Enhancements
+- Updated parent POM to version 0.3.0. (#942e479)
+
+---
+
+For a detailed list of changes, refer to the full changelog in the repository. 
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.4...0.2.5
