@@ -178,4 +178,16 @@ Thank you for using our project! 🚀
 
 For a detailed list of changes, refer to the full changelog in the repository. 
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.4...0.2.5
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.4...0.2.5## v0.2.6
+
+# Release Notes - Version 0.2.6
+
+## Dependency Updates
+- **logback.version**: Upgraded from `1.5.33` to `1.5.34`. ([#14](https://github.com/microsphere-projects/pull/14))
+- **org.xerial:sqlite-jdbc**: Upgraded from `3.53.1.0` to `3.53.2.0`. ([#15](https://github.com/microsphere-projects/pull/15))
+
+## Build and Workflow Enhancements
+- Updated parent `pom` version to `0.3.1`. 
+- General maintenance: merged `main` branch into `release` and bumped patch version post-release.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.5...0.2.6
