@@ -41,3 +41,11 @@ jobs:
           --file pom.xml
           -Drevision=0.0.1-SNAPSHOT
           test
+          --activate-profiles test,coverage
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: microsphere-projects/microsphere-bom
+          fail_ci_if_error: false
