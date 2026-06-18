@@ -207,4 +207,24 @@ For a detailed list of changes, refer to the full changelog in the repository.
 
 Thank you for using our project! 🚀
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.6...0.2.7
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.6...0.2.7## v0.2.8
+
+# Release Notes - Version 0.2.8
+
+## New Features
+- Added `ExampleService` for improved demonstration of functionality.  
+- Simplified example POM structure for better maintainability.
+
+## Documentation
+- Added Codecov badge to `README` for enhanced visibility of test coverage.
+
+## Dependency Updates
+- Updated `microsphere-build` parent to version `0.3.4` for the latest build enhancements.
+
+## Build and Workflow Enhancements
+- Renamed example package and converted it to a Bill of Materials (BOM) setup for consistent dependency management.  
+- Updated CI workflows to reflect new improvements in examples.
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.7...0.2.8
