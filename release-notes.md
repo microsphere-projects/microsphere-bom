@@ -190,4 +190,21 @@ For a detailed list of changes, refer to the full changelog in the repository.
 - Updated parent `pom` version to `0.3.1`. 
 - General maintenance: merged `main` branch into `release` and bumped patch version post-release.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.5...0.2.6
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.5...0.2.6## v0.2.7
+
+# Release Notes for Version 0.2.7
+
+## Build and Workflow Enhancements
+- **Merge Updates**: Merged `main` into `release` and `release` into `main` to sync branches. [#6698b7f, #4a9297b]
+
+## Dependency Updates
+- **Pom Update**: Modified `pom.xml` to include improvements. [#0788e74]
+
+## Other Changes
+- **Version Bump**: Incremented version to the next patch post publishing 0.2.6. [#1e9fe9a] 
+
+---
+
+Thank you for using our project! 🚀
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.6...0.2.7
