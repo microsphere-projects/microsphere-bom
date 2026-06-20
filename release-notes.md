@@ -227,4 +227,17 @@ Thank you for using our project! 🚀
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.7...0.2.8
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.7...0.2.8## v0.2.9
+
+# Release Notes for Version 0.2.9
+
+## Dependency Updates
+- Bumped `commons-logging:commons-logging` from `1.3.6` to `1.4.0`. ([#16](https://github.com/microsphere-projects/your-repo-link/pull/16))
+
+## Build and Workflow Enhancements
+- Merged release branch back into `main`. ([6041d27](https://github.com/microsphere-projects/your-repo-link/commit/6041d27), [2d34dca](https://github.com/microsphere-projects/your-repo-link/commit/2d34dca))
+- Updated version to the next patch after publishing `0.2.8`. ([5b51c5f](https://github.com/microsphere-projects/your-repo-link/commit/5b51c5f))
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.8...0.2.9
