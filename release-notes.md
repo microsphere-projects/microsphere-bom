@@ -240,4 +240,19 @@ Thank you for using our project! 🚀
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.8...0.2.9
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.8...0.2.9## v0.3.0
+
+# Release Notes - Version 0.3.0
+
+## Dependency Updates
+- **Tomcat:** Bumped `tomcat.version` from `11.0.22` to `11.0.23` (#17, 4def6d9).  
+- **JUnit-BOM:** Upgraded `org.junit:junit-bom` from `6.1.0` to `6.1.1` (#20, 1e18b67).  
+- **Logback:** Updated `logback.version` from `1.5.34` to `1.5.37` (#21, decd280).
+
+## Build and Workflow Enhancements
+- **Microsphere Build:** Updated `microsphere-build` to version `0.3.5` (37da804).  
+- Merged main branch changes into the release workflow (34ec9e3, a3263c6, 14f98b2, 46459a7).  
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.9...0.3.0
