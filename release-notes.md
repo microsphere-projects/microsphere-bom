@@ -269,4 +269,20 @@ Thank you for using our project! 🚀
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.1...0.3.2
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.1...0.3.2## v0.3.3
+
+# Release Notes - Version 0.3.3
+
+## Dependency Updates
+- **microsphere-build** bumped to `0.3.7`.
+
+## Build and Workflow Enhancements
+- Internal merges between `main` and `release` branches.  
+- Version bumped to prepare next patch release.
+
+## Other Changes
+- Minor housekeeping tasks.  
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.2...0.3.3
