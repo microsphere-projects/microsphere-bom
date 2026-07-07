@@ -255,4 +255,18 @@ Thank you for using our project! 🚀
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.9...0.3.0
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.2.9...0.3.0## v0.3.2
+
+# Release Notes for Version 0.3.2
+
+## Dependency Updates
+- **Log4j2**: Bumped `log4j2.version` from `2.26.0` to `2.26.1`. ([#22](https://github.com/microsphere-projects/microsphere/issues/22))
+- **microsphere-build**: Updated parent to version `0.3.6`.
+
+## Build and Workflow Enhancements
+- Merged `main` into `release` for alignment. [skip ci]
+- Merged `release` into `main` for synchronization. [skip ci] 
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.1...0.3.2
