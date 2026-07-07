@@ -285,4 +285,15 @@ Thank you for using our project! 🚀
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.2...0.3.3
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.2...0.3.3## v0.3.4
+
+# Release Notes for v0.3.4
+
+## Build and Workflow Enhancements
+- Merged `main` into `release`. [skip ci] (#9bc96b7, #3707468)
+- Updated project to use `microsphere-build` parent version 0.3.8. (#ae1965b)
+
+## Other Changes
+- Bumped version to next patch after publishing v0.3.3. (#7b8ecec)
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.3...0.3.4
