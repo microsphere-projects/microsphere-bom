@@ -296,4 +296,21 @@ Thank you for using our project! 🚀
 ## Other Changes
 - Bumped version to next patch after publishing v0.3.3. (#7b8ecec)
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.3...0.3.4
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.3...0.3.4## v0.3.5
+
+# Release Notes - Version 0.3.5
+
+## Dependency Updates
+- **Tomcat**: Bumped from `11.0.23` to `11.0.24`. ([#23](https://github.com/microsphere-projects/pull/23))
+- **Logback**: Bumped from `1.5.37` to `1.5.38`. ([#24](https://github.com/microsphere-projects/pull/24))
+- **JUnit BOM**: Bumped from `6.1.1` to `6.1.2`. ([#25](https://github.com/microsphere-projects/pull/25))
+- **SQLite JDBC**: Bumped from `3.53.2.0` to `3.53.2.1`. ([#26](https://github.com/microsphere-projects/pull/26))
+
+## Build and Workflow Enhancements
+- Upgraded `microsphere-build` parent to `0.3.9`.
+- Updated Tomcat profiles for all supported JDKs.
+
+## Other Changes
+- Merged the main branch into release multiple times for syncing. [skip ci]  
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.4...0.3.5
