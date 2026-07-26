@@ -323,4 +323,19 @@ Thank you for using our project! 🚀
 ## Other Changes
 - Updated versioning to prepare for the next patch cycle after 0.3.5. ([9ff4608](#))
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.5...0.3.6
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.5...0.3.6## v0.3.7
+
+# Release Notes - Version 0.3.7
+
+## Dependency Updates
+- Bumped `logback.version` from `1.5.38` to `1.6.0`. ([#27](https://github.com/microsphere-projects/pull/27))
+
+## Build and Workflow Enhancements
+- Merged `main` into the `release` branch and updated workflows. [skip ci]
+- Bumped version to the next patch after publishing `0.3.6`.
+
+---
+
+For details on all changes, refer to the [Full Changelog](https://github.com/microsphere-projects/compare/0.3.6...0.3.7).
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.6...0.3.7
