@@ -368,4 +368,24 @@ cab3eb0 chore: merge release into main [skip ci]
 a4606bb chore: bump version to next patch after publishing 0.3.8
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.8...0.3.9
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.8...0.3.9## v0.3.10
+
+_Release notes generation failed. Raw commits since 0.3.9:_
+
+```
+b29096d chore: merge main into release [skip ci]
+033346b Bump build parent to 0.3.14
+32a7386 chore: merge main into release [skip ci]
+a6221a9 chore: merge main into release [skip ci]
+84b7fc3 Merge pull request #32 from microsphere-projects/dependabot/maven/tomcat.version-11.0.25
+7fb82ec Merge pull request #31 from microsphere-projects/dependabot/maven/logback.version-1.6.3
+a8ae236 chore: merge main into release [skip ci]
+4b72696 Merge pull request #30 from microsphere-projects/dependabot/maven/org.apache.maven-apache-maven-3.9.16
+6e6cd19 Build(deps): Bump tomcat.version from 11.0.24 to 11.0.25
+6848a17 Build(deps): Bump logback.version from 1.6.1 to 1.6.3
+294395f Build(deps): Bump org.apache.maven:apache-maven from 3.9.15 to 3.9.16
+8e90934 chore: merge release into main [skip ci]
+f29da69 chore: bump version to next patch after publishing 0.3.9
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.9...0.3.10
