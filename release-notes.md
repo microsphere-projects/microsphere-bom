@@ -353,4 +353,19 @@ For details on all changes, refer to the [Full Changelog](https://github.com/mic
 
 Full Changelog: [v0.3.7...v0.3.8](https://github.com/microsphere-projects/microsphere-projects/compare/v0.3.7...v0.3.8)
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.7...0.3.8
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.7...0.3.8## v0.3.9
+
+_Release notes generation failed. Raw commits since 0.3.8:_
+
+```
+6cf1de6 chore: merge main into release [skip ci]
+3a7f241 Merge branch 'main' of https://github.com/microsphere-projects/microsphere-bom
+6b05050 Bump microsphere-build parent to 0.3.12
+025f5ff chore: merge main into release [skip ci]
+06be694 Merge pull request #29 from microsphere-projects/dependabot/maven/org.junit-junit-bom-6.1.3
+ab00b25 Bump org.junit:junit-bom from 6.1.2 to 6.1.3
+cab3eb0 chore: merge release into main [skip ci]
+a4606bb chore: bump version to next patch after publishing 0.3.8
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.8...0.3.9
