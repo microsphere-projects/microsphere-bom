@@ -388,4 +388,25 @@ a8ae236 chore: merge main into release [skip ci]
 f29da69 chore: bump version to next patch after publishing 0.3.9
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.9...0.3.10
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.9...0.3.10## v0.3.11
+
+_Release notes generation failed. Raw commits since 0.3.10:_
+
+```
+674092b chore: merge main into release [skip ci]
+a076947 Merge pull request #35 from microsphere-projects/dependabot/maven/com.h2database-h2-2.5.250
+3aafa67 Build(deps): Bump com.h2database:h2 from 2.4.240 to 2.5.250
+befc5e6 chore: merge main into release [skip ci]
+33bbab4 Merge pull request #34 from microsphere-projects/dependabot/maven/org.slf4j-slf4j-api-2.0.19
+b034ae6 Build(deps): Bump org.slf4j:slf4j-api from 2.0.18 to 2.0.19
+2bcc526 chore: merge main into release [skip ci]
+5dc5521 Merge branch 'main' of https://github.com/microsphere-projects/microsphere-bom
+7a9f7c0 Bump microsphere-build parent to 0.3.15
+cb82c9b chore: merge main into release [skip ci]
+72b47af Merge pull request #33 from microsphere-projects/dependabot/maven/org.xerial-sqlite-jdbc-3.53.4.0
+78ae26f Build(deps): Bump org.xerial:sqlite-jdbc from 3.53.2.1 to 3.53.4.0
+4ba9cd3 chore: merge release into main [skip ci]
+bb04b76 chore: bump version to next patch after publishing 0.3.10
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.10...0.3.11
