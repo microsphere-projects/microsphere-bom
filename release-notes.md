@@ -409,4 +409,18 @@ cb82c9b chore: merge main into release [skip ci]
 bb04b76 chore: bump version to next patch after publishing 0.3.10
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.10...0.3.11
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.10...0.3.11## v0.3.12
+
+_Release notes generation failed. Raw commits since 0.3.11:_
+
+```
+8a0b05a chore: merge main into release [skip ci]
+8555542 Bump build parent to 0.3.16
+a564d09 chore: merge main into release [skip ci]
+02aa91f Merge pull request #36 from microsphere-projects/dependabot/maven/tomcat.version-11.0.26
+ecdb373 Build(deps): Bump tomcat.version from 11.0.25 to 11.0.26
+be7081d chore: merge release into main [skip ci]
+5f1a21b chore: bump version to next patch after publishing 0.3.11
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.11...0.3.12
