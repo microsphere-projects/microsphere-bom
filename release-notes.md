@@ -423,4 +423,37 @@ be7081d chore: merge release into main [skip ci]
 5f1a21b chore: bump version to next patch after publishing 0.3.11
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.11...0.3.12
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.11...0.3.12## v0.3.13
+
+_Release notes generation failed. Raw commits since 0.3.12:_
+
+```
+bc9d697 chore: merge main into release [skip ci]
+64a4031 Merge branch 'main' of https://github.com/microsphere-projects/microsphere-bom
+aa65918 Skip deploy for BOM example module
+0f54db1 chore: merge main into release [skip ci]
+224b59d Merge pull request #39 from microsphere-projects/dependabot/maven/org.slf4j-slf4j-api-2.0.20
+9aaf9c2 chore: merge main into release [skip ci]
+70633fc Merge pull request #40 from microsphere-projects/dependabot/maven/com.h2database-h2-2.5.252
+26f32b1 Merge branch 'main' into dependabot/maven/org.slf4j-slf4j-api-2.0.20
+0176693 chore: merge main into release [skip ci]
+9654d68 Merge pull request #38 from microsphere-projects/dependabot/maven/org.mockito-mockito-bom-5.24.0
+e126700 chore: merge main into release [skip ci]
+503d732 Merge pull request #37 from microsphere-projects/dependabot/maven/logback.version-1.6.4
+22152da Build(deps): Bump com.h2database:h2 from 2.5.250 to 2.5.252
+6ff2dca Build(deps): Bump org.slf4j:slf4j-api from 2.0.19 to 2.0.20
+4d518e2 Build(deps): Bump org.mockito:mockito-bom from 5.23.0 to 5.24.0
+086323a Build(deps): Bump logback.version from 1.6.3 to 1.6.4
+dff6759 chore: merge main into release [skip ci]
+659b62d Add GitHub Actions to dependabot
+26bb087 chore: merge main into release [skip ci]
+763b7f9 Pin GitHub Actions workflow versions
+347982d chore: merge main into release [skip ci]
+8b09f1a Bump GitHub Actions workflow versions
+c7da97e chore: merge main into release [skip ci]
+bf91928 Bump setup-java to v6.0.1
+66b405b chore: merge release into main [skip ci]
+17b108b chore: bump version to next patch after publishing 0.3.12
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.12...0.3.13
