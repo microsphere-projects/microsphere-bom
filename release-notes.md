@@ -456,4 +456,22 @@ bf91928 Bump setup-java to v6.0.1
 17b108b chore: bump version to next patch after publishing 0.3.12
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.12...0.3.13
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.12...0.3.13## v0.3.14
+
+_Release notes generation failed. Raw commits since 0.3.13:_
+
+```
+42be627 chore: merge main into release [skip ci]
+32a2fa1 Merge pull request #43 from microsphere-projects/dependabot/maven/logback.version-1.6.5
+a7ecdd2 Build(deps): Bump logback.version from 1.6.4 to 1.6.5
+23595a0 chore: merge main into release [skip ci]
+d6749d4 Merge pull request #42 from microsphere-projects/revert-41-dependabot/maven/org.apache.maven-apache-maven-3.10.0
+5dff083 Revert "Build(deps): Bump org.apache.maven:apache-maven from 3.9.16 to 3.10.0"
+9050f68 chore: merge main into release [skip ci]
+f5ad249 Merge pull request #41 from microsphere-projects/dependabot/maven/org.apache.maven-apache-maven-3.10.0
+9af34ec chore: merge release into main [skip ci]
+1bba9e9 chore: bump version to next patch after publishing 0.3.13
+4f05fe5 Build(deps): Bump org.apache.maven:apache-maven from 3.9.16 to 3.10.0
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.13...0.3.14
