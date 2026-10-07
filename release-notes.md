@@ -474,4 +474,15 @@ f5ad249 Merge pull request #41 from microsphere-projects/dependabot/maven/org.ap
 4f05fe5 Build(deps): Bump org.apache.maven:apache-maven from 3.9.16 to 3.10.0
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.13...0.3.14
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.13...0.3.14## v0.3.15
+
+_Release notes generation failed. Raw commits since 0.3.14:_
+
+```
+7264694 chore: merge main into release [skip ci]
+5c0cbcb Bump build parent to 0.3.17
+05adfda chore: merge release into main [skip ci]
+d9db1e6 chore: bump version to next patch after publishing 0.3.14
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.14...0.3.15
