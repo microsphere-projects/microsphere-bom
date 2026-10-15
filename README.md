@@ -98,6 +98,10 @@ We welcome your contributions! Please read [Code of Conduct](./CODE_OF_CONDUCT.m
 
 ## Documentation
 
+* [Documentation Index](./docs/README.md) — 中文文档入口见 [docs/zh/README.md](./docs/zh/README.md)
+* [User Guide](./docs/current/user-guide/README.md) — import instructions, managed dependency lists, code examples, versions and JDK compatibility ([中文版](./docs/current/user-guide/zh/README.md))
+* [Developer Guide](./docs/current/developer-guide/README.md) — architecture, POM source analysis, design patterns, build & release flows ([中文版](./docs/current/developer-guide/zh/README.md))
+
 ## User Guide
 
 [DeepWiki Host](https://deepwiki.com/microsphere-projects/microsphere-bom)
