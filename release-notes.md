@@ -497,4 +497,20 @@ be5d730 chore: merge release into main [skip ci]
 929d3d6 chore: bump version to next patch after publishing 0.3.15
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.15...0.3.16
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.15...0.3.16## v0.3.17
+
+## Documentations
+- Add bilingual user guide and developer guide under `docs/`
+
+## Dependency Updates
+- Bump `logback.version` from 1.6.5 to 1.6.6
+- Bump `actions/setup-java` from 6.0.1 to 6.1.0
+
+## Build and Workflow Enhancements
+- Switch release notes generation to DeepSeek
+- Ignore SonarQube working directory
+
+## Other Changes
+- Update `pom.xml`
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.16...0.3.17
