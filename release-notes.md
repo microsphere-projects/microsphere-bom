@@ -513,4 +513,14 @@ be5d730 chore: merge release into main [skip ci]
 ## Other Changes
 - Update `pom.xml`
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.16...0.3.17
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.16...0.3.17## v0.3.18
+
+## Dependency Updates
+
+- Bump `logback.version` from 1.6.6 to 1.6.8
+- Bump `tomcat.version` from 11.0.27 to 11.0.29
+- Bump `org.xerial:sqlite-jdbc` from 3.53.4.0 to 3.54.1.0
+- Bump `io.github.microsphere-projects:microsphere-build` to 1.0.3
+- Bump `actions/setup-java` from 6.1.0 to 6.3.0
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-bom/compare/0.3.17...0.3.18
